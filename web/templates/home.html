@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block body %}
+{% include "navbar.html" %}
+<section class="hero is-primary is-bold">
+<!-- <section> -->
+  <div class="hero-head">
+    <strong>Current Capacity: {{curr}}</strong>
+  </div>
+  <div class="hero-body">
+
+   {% for name in image_names %}
+    <img class="people" src="{{ url_for('static', filename='PeopleNotWearingMask/' + name) }}" width="300" height="300" style="vertical-align:middle;margin:0px 0px">
+   {% endfor %}
+
+  </div>
+</section>
+
+{% endblock %}
+{% block scripts %}
+<script src="../static/js/scripts.js"></script>
+{% endblock %}
+

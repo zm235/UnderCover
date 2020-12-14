@@ -1,0 +1,4 @@
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BOARD)
+pir = 21
+GPIO.setup(pir,GPIO.IN)
